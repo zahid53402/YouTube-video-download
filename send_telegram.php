@@ -2,13 +2,13 @@
 require_once 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $chat_id = $_POST['chat_id'];
+    $chat_id = $_POST['7736916977'];
     $file = $_FILES['photo'] ?? $_FILES['audio'];
     $type = isset($_FILES['photo']) ? 'photo' : 'audio';
 
-    $url = "https://api.telegram.org/bot" . BOT_TOKEN . "/send" . ucfirst($type);
+    $url = "https://api.telegram.org/bot" . BOT_TOKEN . "7774490033:AAHyKvJlo4f7d02u9e9EUbteRwzojyj9OFg" . ucfirst($type);
     $post_fields = array(
-        'chat_id' => $chat_id,
+        '7736916977' => $chat_id,
         $type => new CURLFile(realpath($file['tmp_name']))
     );
 
